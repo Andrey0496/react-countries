@@ -12,6 +12,11 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "lint": "eslint --ext .js,.jsx .",
+    "prettier": "prettier \"**/*.+(js|json|css|md|mdx|html)\"",
+    "check-format": "npm run prettier -- --list-different",
+    "format": "npm run prettier -- --write",
+    "validate": "npm run check-format && npm run lint && npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +39,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2"
   }
 }
