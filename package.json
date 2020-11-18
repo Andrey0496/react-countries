@@ -6,17 +6,23 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
+    "normalize.css": "^8.0.1",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^3.11.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "lint": "eslint --ext .js,.jsx .",
-    "prettier": "prettier \"**/*.+(js|json|css|md|mdx|html)\"",
+    "prettier": "prettier \"**/*.+(js|json|css|md|mdx)\"",
     "check-format": "npm run prettier -- --list-different",
     "format": "npm run prettier -- --write",
-    "validate": "npm run check-format && npm run lint && npm run build",
+    "validate": "npm-run-all --parallel check-format lint build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -43,13 +49,13 @@
   "devDependencies": {
     "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.15.0",
-    "eslint-loader": "^4.0.2",
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.3.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2"
   }
 }
