@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as mediaQueries from '../styles/mediaQueries';
 
 export const HeadingStyles = styled.div`
   display: flex;
@@ -32,6 +33,17 @@ export const HeadingStyles = styled.div`
 
     margin-left: 2px;
   }
+
+  ${mediaQueries.small} {
+    > div {
+      display: none;
+    }
+
+    button:nth-child(4),
+    button:nth-child(5) {
+      display: none;
+    }
+  }
 `;
 
 export const RowStyles = styled.div`
@@ -63,5 +75,16 @@ export const RowStyles = styled.div`
 
   div {
     flex: 4;
+  }
+
+  @media screen and (max-width: 720px) {
+    .flag {
+      display: none;
+    }
+
+    div:nth-child(4),
+    div:nth-child(5) {
+      display: none;
+    }
   }
 `;
